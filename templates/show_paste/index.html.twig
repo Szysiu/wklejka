@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wklejka{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark" style="width: 70px;">Nick</span>
+            <input type="text" class="form-control" value="{{ paste.nick }}" id="nick_" aria-label="Nick"
+                   aria-describedby="basic-addon1" disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark" style="width: 70px;">Temat</span>
+            <input type="text" class="form-control" value="{{ paste.title }}" id="topic_" aria-label="Topic"
+                   aria-describedby="basic-addon1" disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark" style="width: 70px;">Data</span>
+            <input type="text" class="form-control" value="{{ paste.createdAt|date }}" id="date" aria-label="Topic"
+                   aria-describedby="basic-addon1" disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group">
+            <pre class="form-control" id="content_" aria-label="Text" disabled style="background: #1c1e1f; white-space: pre-wrap">
+                <code class="language-{{ paste.language.tag }}">{{ paste.content }}</code>
+            </pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-1">
+            <button type="button" id="copy" class="btn btn-outline-primary btn-lg mb-2">Kopiuj</button>
+        </div>
+        <div class="col-xl-1">
+            <a class="btn btn-outline-warning btn-lg" href="{{ path('app_index') }}">Powrót</a>
+        </div>
+    </div>
+
+
+
+{% endblock %}
