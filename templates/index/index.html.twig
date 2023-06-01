@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wklejam{% endblock %}
+
+{% block content %}
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark" style="width: 70px;">Nick</span>
+            {{ form_widget(form.nick) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-dark" style="width: 70px;">Temat</span>
+            {{ form_widget(form.title) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group mb-3">
+            {{ form_widget(form.language) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-group">
+            <span class="input-group-text bg-dark" style="width: 70px;">Treść</span>
+            {{ form_widget(form.content) }}
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-11">
+            <button type="submit" class="btn btn-outline-success btn-lg">Dodaj</button>
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}
