@@ -1,6 +1,6 @@
 # wklejka
 
-How to run app using Docker:
+How to run app using Docker: \
 1.Clone this repo \
 2.Go inside <kbd>.docker</kbd> directory \
 3.Run <kbd>docker compose up -d</kbd> to start containers \
