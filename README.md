@@ -1,4 +1,21 @@
-# wklejka
+# SHARING AND STORING CODE SNIPPETS AND TEXT PLATFORM
+
+
+Pastebin-style tool that allows users to  paste any text or code, specify a nickname and title, and choose the syntax language for their entry. The platform records the exact date of submission and applies syntax highlighting to the code, automatically coloring the syntax based on the selected programming language for improved readability.
+
+Made with: PHP, Symfony, Javascript, MYSQL, HTML, CSS, TWIG
+
+
+
+
+
+
+
+
+
+
+
+
 
 How to run app using Docker: \
 1.Clone this repo \
